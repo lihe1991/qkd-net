@@ -177,7 +177,7 @@ On two Linux (Ubuntu) systems, please follow the steps below to get a two nodes 
 }
 ```
 
-```##HL: Needs to investigate```
+```#HL: Needs to investigate```
 
 ## Correctly Handle Configuration Files
 As this is a multi-layer distributed system, a few configuration files are used to facilitate the deployment for different nodes (or sites).  They need to be carefully checked before running/testing the system.
