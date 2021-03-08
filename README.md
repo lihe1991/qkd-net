@@ -1,7 +1,9 @@
 qkd-net
 =======
+```
 # Notes from He Li:
 ## I have reproduced the Alice and Bob system, but have expreienced some debugging when installing the system from the scrathch.  
+```
 
 Overview
 --------
@@ -15,7 +17,7 @@ and implementation. One benefit of it is to have flexibility in production deplo
 
 **Complied and tested successfully on Ubuntu 16.04 and Linux Mint 18.3 with Java 8.  Changes will be needed for working in other environments (OS, Java version, etc.)**
 
-## HL: Proved that macOS requires multiple fixes, so suggesting to use Linux. I used Linux 18.04 and it works.
+```## HL: Proved that macOS requires multiple fixes, so suggesting to use Linux. I used Linux 18.04 and it works.```
 
 Layers
 ------
@@ -65,7 +67,7 @@ Install following before proceeding.
 Make sure the executables are in system path.
 
 1. Java SDK 8 or later - http://www.oracle.com/technetwork/java/javase/downloads/index.html
-2. Maven - https://maven.apache.org/ or apt-get, if on Ubuntu (**HL: maven**)
+2. Maven - https://maven.apache.org/ or apt-get, if on Ubuntu ```(**HL: maven**)```
 3. screen - apt-get, if on Ubuntu
 4. git - apt-get, if on Ubuntu
 
@@ -86,7 +88,7 @@ On two Linux (Ubuntu) systems, please follow the steps below to get a two nodes 
 4. *cd qkd-net*
 5. *cd kms*
 6. *./scripts/build*
-7. *rm ~/.qkd* (Step 6 generates ~/.qkd directory) (**HL: use *control h* to show hidden .qkd folder**)
+7. *rm ~/.qkd* (Step 6 generates ~/.qkd directory) ```(**HL: use *control h* to show hidden .qkd folder**)```
 8. *cd ..*
 9. *tar xvf **qkd-kaiduan-a.tar***
 10. *mv .qkd ~/*
@@ -116,8 +118,8 @@ On two Linux (Ubuntu) systems, please follow the steps below to get a two nodes 
 16. On Ubuntu A, *cd qkd-net/kms*, run command *./scripts/run*
 17. On Ubuntu B, *cd qkd-net/kms*, run command *./scripts/run*
 18. We will run tls-demo application alice on Ubuntu A and run bob on Ubuntu B
-19. On Ubuntu A, *cd ../applications/tls-demo/*, run *make* command ```c (**HL: requires *sudo apt install libjson-c-dev* to install json-c library**)```
-20. On Ubuntu B, *cd ../applications/tls-demo/*, change function static char* site_id(char* ip) in **src/bob.c** as below, and run *make*
+19. On Ubuntu A, *cd ../applications/tls-demo/*, run *make* command ```(**HL: requires *sudo apt install libjson-c-dev* to install json-c library**)```
+20. On Ubuntu B, *cd ../applications/tls-demo/*, change function static char* site_id(char* ip) in **src/bob.c** as below, and run *make* command ```(**HL: requires *sudo apt install libjson-c-dev*, *sudo apt-get install libssl-dev*, *sudo apt-get install libcurl4-openssl-dev* **)```
 ```c
         static char* site_id(char* ip) {
             if (strcmp(ip, "192.168.2.212") == 0)
@@ -175,6 +177,7 @@ On two Linux (Ubuntu) systems, please follow the steps below to get a two nodes 
 }
 ```
 
+```##HL: Needs to investigate```
 
 ## Correctly Handle Configuration Files
 As this is a multi-layer distributed system, a few configuration files are used to facilitate the deployment for different nodes (or sites).  They need to be carefully checked before running/testing the system.
